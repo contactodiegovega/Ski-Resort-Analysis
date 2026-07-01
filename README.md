@@ -33,6 +33,8 @@ The Power BI dashboard provides an interactive overview of the global ski resort
 
 ## 🎿 Streamlit Recommendation App
 
+🔗 **Try the app here:** https://diego-vega-ski-resort-analysis-y9ayktezebdfhekhcip5.streamlit.app/
+
 The Streamlit application recommends ski resorts based on:
 
 - Budget
