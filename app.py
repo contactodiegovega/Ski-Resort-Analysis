@@ -73,6 +73,11 @@ COL_ACCESO = get_col(["Acceso y aparcamiento", "Access, on-site parking"])
 COL_SENALIZACION = get_col(["Señalización", "Orientation (trail map, information boards, sign-postings)"])
 COL_LIMPIEZA = get_col(["Limpieza e higiene", "Cleanliness and hygiene"])
 COL_REMONTES = get_col(["Remontes y teleféricos", "Lifts and cable cars"])
+COL_ALOJAMIENTO = get_col([
+    "Alojamiento en pistas",
+    "Accommodation offering at the slopes",
+    "Accommodation directly at the slopes and lifts"
+])
 
 
 def normalize(series):
@@ -165,6 +170,7 @@ km_min = st.sidebar.slider(
 st.sidebar.subheader("Filtros de calidad (0-5)")
 
 snow_min = st.sidebar.slider("Fiabilidad de nieve", 0.0, 5.0, 0.0, 0.1)
+alojamiento_min = st.sidebar.slider("Alojamiento en pistas", 0.0, 5.0, 0.0, 0.1)
 access_min = st.sidebar.slider("Acceso y aparcamiento", 0.0, 5.0, 0.0, 0.1)
 orientation_min = st.sidebar.slider("Señalización", 0.0, 5.0, 0.0, 0.1)
 clean_min = st.sidebar.slider("Limpieza e higiene", 0.0, 5.0, 0.0, 0.1)
@@ -182,6 +188,7 @@ df_filtrado = df[
     (df[COL_PRECIO_EUR] <= precio_max) &
     (df[COL_KM_TOTALES] >= km_min) &
     (df[COL_NIEVE] >= snow_min) &
+    (df[COL_ALOJAMIENTO] >= alojamiento_min) &
     (df[COL_ACCESO] >= access_min) &
     (df[COL_SENALIZACION] >= orientation_min) &
     (df[COL_LIMPIEZA] >= clean_min) &
@@ -287,6 +294,7 @@ else:
                         "Gastronomía",
                         "Remontes y teleféricos",
                         "Snowpark",
+                        "Alojamiento en pistas",
                         "Familias y niños",
                         "Fiesta / Après-ski",
                     ],
@@ -304,6 +312,7 @@ else:
                         row[COL_GASTRONOMIA],
                         row[COL_REMONTES],
                         row[COL_SNOWPARK],
+                        row[COL_ALOJAMIENTO],
                         row[COL_FAMILIAS],
                         row[COL_APRES],
                     ]
