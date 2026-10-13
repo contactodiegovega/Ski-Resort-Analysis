@@ -18,6 +18,8 @@ Exploratory Data Analysis (EDA) was then performed to uncover trends and relatio
 
 ## 📊 Power BI Dashboard
 
+Link del dashboard: https://uphubgrade-my.sharepoint.com/:u:/g/personal/diego_vega_bootcamp-upgrade_com/IQCX8oQc3yGvT5qH62UyjfCPAavgnnUcZ5uYAwX1PZHZOtE?e=Tkek0C
+
 The Power BI dashboard provides an interactive overview of the global ski resort market, allowing users to explore destinations, compare resorts, and identify key trends through maps, KPIs, and advanced visualizations.
 
 ### Features
